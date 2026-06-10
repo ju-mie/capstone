@@ -1,0 +1,22 @@
+.testimonials-section{
+  color: var(--text-on-highlighted);
+  background-color: var(--bg-highlighted);
+}
+
+.testimonials-section__container {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  grid-row: 2;
+}
+
+.testimonials-section__title {
+  grid-column: col-start 3 / span 8;
+  text-align: center;
+}
+
+.testimonials-section__teaser-list {
+  display: grid;
+  grid-template-columns: repeat(8, [col-start] 1fr);
+  grid-column: col-start 3 / span 8;
+  gap: 16px;
+}

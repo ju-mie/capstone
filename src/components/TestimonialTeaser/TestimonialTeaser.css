@@ -1,0 +1,31 @@
+.testimonial-teaser {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  gap: 8px;
+}
+
+.testimonial-teaser__wrapper {
+  display: flex;
+  grid-column: col-start 3 / span 8;
+  gap: 8px;
+  align-items: center;
+}
+
+.testimonial-teaser__image-wrapper {
+  flex: 0 1 60px;
+  border-radius: var(--rounded-lg);
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.testimonial-teaser__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-teaser__name {
+  flex: 3 1;
+  margin: 0;
+}

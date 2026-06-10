@@ -1,7 +1,9 @@
 import React from "react";
 
-const Image = ({className='', src, alt}) => {
-  <img className={className} src={src} alt={alt} />
+const Image = ({className='', imgSrc, imgAlt}) => {
+  return (
+  <img className={className} src={imgSrc} alt={imgAlt} />
+  )
 }
 
 export default Image;

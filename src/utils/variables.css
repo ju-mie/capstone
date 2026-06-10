@@ -4,7 +4,7 @@
   /* primary colors */
   --primary-1: #495E57;
   --primary-2: #F4CE14;
-  --primary-2-darker: darken(var(--primary-2), 10%);
+  --primary-2-darker: hsl(from var(--primary-2) h s calc(l - 10));
 
   /* secondary colors */
   --secondary-dark: #EE9972;
@@ -28,7 +28,11 @@
   --bg-default: var(--neutral-white);
   --bg-highlighted: var(--neutral-light);
   --bg-dark: var(--primary-1);
-  --text-default: var(--neutral-dark);
+  --text-default: var(--primary-1);
+  --text-variant: var(--neutral-dark);
   --text-on-dark: var(--neutral-light);
-  --text-on-highlighted: var(--neutral-dark);
+  --text-on-highlighted: var(--text-default);
+
+  --rounded-sm: 8px;
+  --rounded-lg: 16px;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../Logo";
+import Image from "../Image";
 import './Footer.css';
 
 const footerLinks = [
@@ -72,35 +72,37 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer-logo">
-        <Logo className="footer-logo__img" imageSrc="./assets/Asset 9@4x.png" altText="small version of logo"/>
+      <div className="footer__container container">
+        <div className="footer__logo logo logo--footer">
+          <Image className="logo__img logo__img--footer" imgSrc="./assets/Asset 9@4x.png" imgAlt="small version of logo"/>
+        </div>
+        {footerLinks && footerLinks.length > 0 && (
+          <nav className="footer-nav">
+            <ul key="footer-nav__list" className="footer-nav__list">
+            {footerLinks.map((section, index) => (
+              <li key={section.titel} className="footer-nav__section">
+                <h3 key={section.titel +'-' +section.index} className="footer-nav__section-title h4">{section.title}</h3>
+                {section.links && section.links.length > 0 && (
+                  <ul key={"section-list"+section.links.index} className="footer-nav__section-list">
+                  {section.links.map((link, label, anchor, index) => (
+                    <li key={link.label} className="footer-nav__section-item">
+                      <a
+                        key={link.label+'-'+link.index}
+                        className="footer-nav__link"
+                        href={"/#"+link.anchor}
+                      > 
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        )}
       </div>
-      {footerLinks && footerLinks.length > 0 && (
-        <nav className="footer-nav">
-          <ul className="footer-nav__list">
-          {footerLinks.map((section) => (
-            <li key={section.titel} className="footer-nav__section">
-              <h3 className="footer-nav__section-title">{section.title}</h3>
-              {section.links && section.links.length > 0 && (
-                <ul className="footer-nav__section-list">
-                {section.links.map((link, label, anchor) => (
-                <li key={link.label} className="footer-nav__section-item">
-                  <a
-                    className="footer-nav__link"
-                    href={"/#"+link.anchor}
-                    onClick={''}
-                  > 
-                    {link.label}
-                  </a>
-                </li>
-                ))}
-              </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-      </nav>
-      )}
     </footer>
   )
 }

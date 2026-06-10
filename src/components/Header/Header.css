@@ -1,28 +1,28 @@
-.header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: space-between;
+.header__container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  align-items: center;
 }
 
-.header-logo {
-  flex: 0 0 25%;
+.header__logo {
+  grid-column: col-start 3 / span 2;
 }
 
-.header-logo__img {
+.logo__img--header {
   display: block;
   max-width: 200px;
   height: auto;
 }
 
 .header-nav {
-  flex: 1 1 auto;
+  grid-column: col-start 5 / span 6;
 }
 
 .header-nav__list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 32px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
