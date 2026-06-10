@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-logo {
+  flex: 0 0 25%;
+}
+
+.footer-logo__img {
+  display: block;
+  max-width: 100px;
+  height: auto;
+}
+
+.footer-nav {
+  flex: 1 1 auto;
+}
+
+.footer-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav__section {
+  flex: 1 1 auto;
+}
+
+.footer-nav__section-list {
+  padding: 0;
+  list-style: none;
+}

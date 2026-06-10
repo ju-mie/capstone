@@ -1,0 +1,34 @@
+:root {
+  /*** COLORS ***/
+
+  /* primary colors */
+  --primary-1: #495E57;
+  --primary-2: #F4CE14;
+  --primary-2-darker: darken(var(--primary-2), 10%);
+
+  /* secondary colors */
+  --secondary-dark: #EE9972;
+  --secondary-light: #FBDABB;
+
+  /* neutral colors */
+  --neutral-white: #ffffff;
+  --neutral-light: #EDEFEE;
+  --neutral-dark: #333333;
+
+
+  /*** TYPO ***/
+  --font-serif: 'Markazi Text', Georgia, serif;
+  --font-sans: 'Karla', Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.125;
+  --line-height-airy: 1.5;
+
+
+  /*** ***/
+  --bg-default: var(--neutral-white);
+  --bg-highlighted: var(--neutral-light);
+  --bg-dark: var(--primary-1);
+  --text-default: var(--neutral-dark);
+  --text-on-dark: var(--neutral-light);
+  --text-on-highlighted: var(--neutral-dark);
+}
