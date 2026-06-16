@@ -1,6 +1,10 @@
+.header {
+  flex: 1;
+}
+
 .header__container {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: var(--spacing-xxs);
+  padding-bottom: var(--spacing-xxs);
   align-items: center;
 }
 
@@ -21,7 +25,7 @@
 .header-nav__list {
   display: flex;
   justify-content: flex-end;
-  gap: 32px;
+  gap: var(--spacing-md);
   list-style: none;
   margin: 0;
   padding: 0;

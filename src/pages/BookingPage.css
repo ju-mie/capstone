@@ -1,0 +1,4 @@
+.booking-section__title,
+.booking-section__title  ~ p {
+  grid-column: col-start 3 / span 8;
+}

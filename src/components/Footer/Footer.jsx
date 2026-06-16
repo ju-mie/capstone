@@ -53,7 +53,7 @@ const Footer = () => {
           <nav className="footer-nav">
             <ul className="footer-nav__list">
               {routes.routes && routes.routes.length > 0 && (
-                <li className="footer-nav__section">
+                <li key="footer-navigation" className="footer-nav__section">
                   <h3 className="footer-nav__section-title h4">Doormat Navigation</h3>
                   <ul className="footer-nav__section-list">
                     {routes.routes.map((route) => (

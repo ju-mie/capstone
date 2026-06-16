@@ -17,6 +17,7 @@ const DishTeaser = ({dish="", price="", text="", imgSrc="", imgAlt="", imgClass=
         </div>
         <p className="dish-teaser__text">{text}</p>
         <Button
+          className="dish-teaser__button"
           variant="ghost"
           label="Deliver"
           />

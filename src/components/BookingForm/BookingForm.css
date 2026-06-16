@@ -1,0 +1,5 @@
+.booking-form {
+  grid-column: col-start 3 / span 8;
+  display: grid;
+  gap: var(--spacing-xs);
+}

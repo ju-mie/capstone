@@ -1,7 +1,7 @@
 .dish-teaser {
   grid-column: span 2;
   border-radius: var(--rounded-lg) var(--rounded-lg) var(--rounded-sm) var(--rounded-sm);
-  box-shadow: 0 4px 4px var(--neutral-dark);
+  box-shadow: var(--box-shadow);
   overflow: hidden;
   background-color: var(--bg-highlighted);
 }
@@ -12,6 +12,7 @@
 }
 
 .dish-teaser__img {
+  border-radius: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -20,8 +21,8 @@
 .dish-teaser__text-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  gap: 8px;
+  padding: var(--spacing-xs);
+  gap: var(--spacing-xxs);
 }
 
 .dish-teaser__header {
@@ -32,6 +33,6 @@
 }
 
 .dish-teaser__price {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 18px;
 }

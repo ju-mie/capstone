@@ -1,11 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-regular);
+  color: var(--primary-1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--primary-1);
+}
+
+main {
+  flex: 2;
 }
 
 code {
@@ -21,7 +24,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 h1, .h1, h2, .h2 {
   font-family: var(--font-serif);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 h1, .h1 {
@@ -29,7 +32,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 48px;
+  font-size: 4var(--spacing-xxs);
 }
 
 h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -45,7 +48,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: var(--spacing-xs);
   font-weight: 900;
 }
 
@@ -71,6 +74,7 @@ a:focus::after {
 
 img {
   display: block;
+  border-radius: var(--rounded-lg);
 }
 
 p {
@@ -80,21 +84,23 @@ p {
 .container {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-  gap: 16px;
+  grid-auto-columns: minmax(150px, auto);
+  gap: var(--spacing-xs);
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 var(--spacing-xs);
   width: 100%;
   max-width: 1440px;
 }
 
 .button {
   display: inline-block;
-  padding: 8px 16px;
+  padding: var(--spacing-xxs) var(--spacing-xs);
   border: 2px solid var(--primary-2);
   border-radius: var(--rounded-lg);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--neutral-dark);
+  box-shadow: var(--box-shadow);
 }
 
 .button::after {
@@ -116,4 +122,5 @@ p {
 .button--ghost {
   background-color: transparent;
   border-color: transparent;
+  box-shadow: none;
 }

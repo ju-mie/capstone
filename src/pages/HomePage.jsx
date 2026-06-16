@@ -1,5 +1,5 @@
 import About from '../components/About/About';
-import Hero from '../components/Hero/Hero';
+import CallToAction from '../components/CallToAction/CallToAction';
 import Specials from '../components/Specials/Specials';
 import Testimonials from '../components/Testimonials/Testimonials';
 
@@ -60,7 +60,7 @@ const specials = [
 const HomePage = () => {
   return (
     <>
-      <Hero
+      <CallToAction
         title="Little Lemon"
         subtitle="Chicago"
         text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."

@@ -1,6 +1,6 @@
 .specials-section__container {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: var(--spacing-xxxl);
+  padding-bottom: var(--spacing-xxxl);
   grid-row: 2;
 }
 
@@ -8,7 +8,7 @@
   grid-column: col-start 3 / span 8;
   display: flex;
   justify-content: space-between;
-  gap: 16px
+  gap: var(--spacing-xs)
 }
 
 .specials-section__title {
@@ -19,5 +19,5 @@
   display: grid;
   grid-template-columns: repeat(8, [col-start] 1fr);
   grid-column: col-start 3 / span 8;
-  gap: 16px;
+  gap: var(--spacing-xs);
 }

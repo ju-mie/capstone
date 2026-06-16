@@ -1,15 +1,16 @@
 .footer {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  padding: 32px 0;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md) 0;
   color: var(--text-on-dark);
   background-color: var(--bg-dark);
 }
 
 .footer__container {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: var(--spacing-xxs);
+  padding-bottom: var(--spacing-xxs);
   grid-row: 1;
 }
 
@@ -29,7 +30,7 @@
   display: grid;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-row: 1;
-  gap: 16px;
+  gap: var(--spacing-xs);
   margin: 0;
   padding: 0;
   list-style: none;

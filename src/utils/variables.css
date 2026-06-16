@@ -3,6 +3,7 @@
 
   /* primary colors */
   --primary-1: #495E57;
+  --primary-1-darker: hsl(from var(--primary-1) h s calc(l - 10));
   --primary-2: #F4CE14;
   --primary-2-darker: hsl(from var(--primary-2) h s calc(l - 10));
 
@@ -17,11 +18,19 @@
 
 
   /*** TYPO ***/
-  --font-serif: 'Markazi Text', Georgia, serif;
-  --font-sans: 'Karla', Arial, sans-serif;
+  --font-serif: markazitext, Georgia, serif;
+  --font-sans: karla, Arial, sans-serif;
   --font-size-base: 16px;
   --line-height-base: 1.125;
   --line-height-airy: 1.5;
+
+
+    /* font-weight */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
 
 
   /*** ***/
@@ -35,4 +44,15 @@
 
   --rounded-sm: 8px;
   --rounded-lg: 16px;
+  --box-shadow: 0 4px 4px color-mix(in srgb, var(--neutral-dark), transparent 50%);
+
+  --spacing-base: 8px;
+  --spacing-xxs: var(--spacing-base);             /* 8px */
+  --spacing-xs: calc(var(--spacing-base) * 2);    /* 16px */
+  --spacing-sm: calc(var(--spacing-base) * 3);    /* 24px */
+  --spacing-md: calc(var(--spacing-base) * 4);    /* 32px */
+  --spacing-lg: calc(var(--spacing-base) * 5);    /* 40px */
+  --spacing-xl: calc(var(--spacing-base) * 6);    /* 48px */
+  --spacing-xxl: calc(var(--spacing-base) * 7);   /* 56px */
+  --spacing-xxxl: calc(var(--spacing-base) * 8);  /* 64px */
 }

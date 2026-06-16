@@ -1,6 +1,6 @@
 import React from "react";
 import './Testimonials.css';
-import TestimonialTeaser from "../TestimonialTeaser/TestimonialTeaser";
+import CustomersSay from "../CustomersSay/CustomersSay";
 
 const Testimonials = ({ data, title }) => {
   return (
@@ -8,9 +8,9 @@ const Testimonials = ({ data, title }) => {
       <div className="testimonials-section__container container">
         <h3 className="testimonials-section__title">{title}</h3>
         {data && data.length > 0 && (
-          <div className="testimonials-section__teaser-list">
+          <div className="testimonials-section__customers-say">
           {data.map((teaser, index) => (
-            <TestimonialTeaser
+            <CustomersSay
               key={index}
               rating={teaser.rating}
               guest={teaser.guest}
