@@ -1,86 +1,46 @@
 import React, { useReducer } from 'react';
-import {
-  Outlet,
-  Routes,
-  Route,
-  createBrowserRouter
-} from "react-router";
+import { Routes, Route } from "react-router";
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import './utils/variables.css';
 import './App.css';
 import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
+import ConfirmedBooking from "./pages/ConfirmedBooking";
+import { fetchAPI, submitAPI } from './Api.js';
+import { useNavigate } from "react-router";
 
-export const routes = [
-  {
-    label: "Home",
-    element: <HomePage />,
-    path: "/",
-  },
-  {
-    label: "About",
-    path: "/about",
-  },
-  {
-    label: "Menu",
-    path: "/menu",
-  },
-  {
-    label: "Reservation",
-    element: <BookingPage />,
-    path: "/reservation",
-  },
-  {
-    label: "Order Online",
-    path: "/order-online",
-  },
-  {
-    label: "Login",
-    path: "/login",
-  },
-];
+export const initializeTimes = () => {
+  return fetchAPI(new Date());
+};
+
+export const updateTimes = (state, action) => {
+  return fetchAPI(new Date(action));
+};
+
+const initializeOccasions = () => {
+  return [
+  'Birthday',
+  'Anniversary',
+  ];
+};
+
+export const updateOccasions = (state, action) => {
+  return state;
+};
 
 function App() {
-
-  
-  const initializeTimes = () => {
-    return [
-      "17:00",
-      "18:00",
-      "19:00",
-      "20:00",
-      "21:00",
-    ];
-  };
-
-  const updateTimes = (state, action) => {
-    return [
-      "17:00",
-      "18:00",
-      "19:00",
-      "20:00",
-      "21:00",
-    ];
-  };
-
-  const initializeOccasions = () => {
-    return [
-    'Birthday',
-    'Anniversary',
-    ];
-  };
-
-  const updateOccasions = (state, action) => {
-    return [
-    'Birthday',
-    'Anniversary',
-    ];
-  };
+  const navigate = useNavigate();
 
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
   const [availableOccasions, dispatchOccasions] = useReducer(updateOccasions, [], initializeOccasions);
+
+  const submitForm = (formData) => {
+    if (submitAPI(formData)) {
+      navigate("/confirmed-booking");
+    }
+  };
 
   return (
     <div className="App">
@@ -88,36 +48,29 @@ function App() {
         <Header />
         <main>
           <Routes>
-            {routes.routes && routes.routes.length > 0 && (
-              routes.routes.map((route) => (
-                <Route path={route.path} element={route.element}/>
-              ))
-            )}
-          </Routes>
-          <Route element={<App />}>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" />
-            <Route path="/menu" />
-            <Route path="/booking" element={<BookingPage 
-              availableTimes={availableTimes}
-              availableOccasions={availableOccasions}
-              dispatch={dispatch}
-              dispatchOccasions={dispatchOccasions}
-              />}
-            />
-            <Route path="/order-online" />
-            <Route path="/login" />
-          </Route>
-
-          <Outlet
-            context={{
-              availableTimes,
-              availableOccasions, 
-              dispatch,
-              dispatchOccasions
-            }}
-          />
-        </main>
+              <Route path="/about" element={<h1>About</h1>} />
+              <Route path="/menu" element={<h1>Menu</h1>} />
+              <Route
+                path="/booking"
+                element={
+                  <BookingPage
+                    availableTimes={availableTimes}
+                    availableOccasions={availableOccasions}
+                    dispatch={dispatch}
+                    dispatchOccasions={dispatchOccasions}
+                    submitForm={submitForm}
+                  />
+                }
+              />
+              <Route
+                path="/confirmed-booking"
+                element={<ConfirmedBooking />}
+              />
+              <Route path="/order-online" element={<h1>Order Online</h1>} />
+              <Route path="/login" element={<h1>Login</h1>} />
+            </Routes>
+          </main>
         <Footer/>
       </>
     </div>
