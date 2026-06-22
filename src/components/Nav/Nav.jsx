@@ -1,14 +1,14 @@
 import React from "react"
 import { NavLink } from "react-router";
-import routes from '../../Router';
+import { routes } from "../../routes";
 
 const Nav = () => {
 
   return (
     <nav className="header-nav">
-      {routes.routes && routes.routes.length > 0 && (
+      {routes && routes.length > 0 && (
         <ul className="header-nav__list">
-          {routes.routes.map((route) => (
+          {routes.map((route) => (
             <li key={route.path} className="header-nav__item">
               <NavLink
                 to={route.path}
