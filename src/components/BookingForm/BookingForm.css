@@ -1,5 +1,17 @@
 .booking-form {
   grid-column: col-start 3 / span 8;
   display: grid;
+  grid-template-columns: repeat(8, [col-start] 1fr);
+  gap: var(--spacing-xs);
+  width: 100%;
+}
+
+.booking-form__title {
+  grid-column: span 8;
+}
+
+.booking-form__form {
+  grid-column: span 8;
+  display: grid;
   gap: var(--spacing-xs);
 }
