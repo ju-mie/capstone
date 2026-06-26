@@ -19,7 +19,7 @@ const BookingPage = (
         imgSrc="./assets/restaurant.jpg"
         imgAlt="interior view of the restaurant"
       />
-      <BookingForm 
+      <BookingForm
         availableTimes={availableTimes}
         availableOccasions={availableOccasions}
         dispatch={dispatch}
