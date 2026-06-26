@@ -19,8 +19,8 @@ const DishTeaser = ({dish="", price="", text="", imgSrc="", imgAlt="", imgClass=
         <Button
           className="dish-teaser__button"
           variant="ghost"
-          label="Deliver"
-          icon="./assets/icons/delivery.png"
+          label="Order a delivery"
+          iconSrc="./assets/icons/delivery.png"
           />
       </div>
     </article>

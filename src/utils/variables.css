@@ -26,11 +26,11 @@
 
 
     /* font-weight */
-    --font-weight-regular: "wght" 400;
-    --font-weight-medium: "wght" 500;
-    --font-weight-semibold: "wght" 600;
-    --font-weight-bold: "wght" 700;
-    --font-weight-extra-bold: "wght" 800;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
 
 
   /*** ***/

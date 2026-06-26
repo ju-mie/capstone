@@ -44,14 +44,14 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 h3, .h3 {
   font-family: var(--font-sans);
   font-size: 20px;
-  font-weight: 900;
+  font-weight: var(--font-weight-extrabold);
   text-transform: uppercase;
 }
 
 h4, .h4 {
   font-family: var(--font-sans);
   font-size: 16px;
-  font-weight: 900;
+  font-weight: var(--font-weight-extrabold);
 }
 
 a {
