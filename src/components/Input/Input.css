@@ -15,10 +15,6 @@
   min-height: 44px;
 }
 
-.field__input::-webkit-calendar-picker-indicator {
-  /*background-image: url('./assets/icons/Recent.svg');*/
-}
-
 .field__input,
 .field__input:hover,
 .field__input:focus-visible,

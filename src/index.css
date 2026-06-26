@@ -83,6 +83,22 @@ p {
   margin: 0;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--spacing-xxs) var(--spacing-xs);
+  margin: 0;
+}
+
+dt {
+  grid-column: span 1;
+  font-weight: var(--font-weight-medium);
+}
+dd {
+  margin: 0;
+  grid-column: span 1;
+}
+
 .page {
   margin-top: 70px;
 }
@@ -116,6 +132,7 @@ p {
   }
 }
 
+.section__content,
 .page__content {
   grid-column: col-start 3 / span 8;
   display: flex;
@@ -124,6 +141,7 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
+  .section__content,
   .page__content {
     grid-column: col-start 2 / span 10;
   }
@@ -131,6 +149,7 @@ p {
 
 @media screen and (max-width: 960px) {
 
+  .section__content,
   .page__content {
     grid-column: span 12;
   }
