@@ -2,3 +2,35 @@
   display: grid;
   gap: var(--spacing-xxs);
 }
+
+.field__label {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.field__input {
+  border: 1px solid var(--primary-1);
+  border-radius: var(--rounded-sm);
+  padding: var(--spacing-xs);
+  min-height: 44px;
+}
+
+.field__input::-webkit-calendar-picker-indicator {
+  /*background-image: url('./assets/icons/Recent.svg');*/
+}
+
+.field__input,
+.field__input:hover,
+.field__input:focus-visible,
+.field__input:focus-within {
+  border-width: 2px;
+  padding: calc(var(--spacing-xs) - 1px);
+}
+
+.input,
+.field__input:focus,
+.field__input::-webkit-calendar-picker-indicator:focus-visible {
+  outline-offset: 4px;
+  outline-color: var(--primary-2);
+  border-radius: var(--rounded-sm);
+}

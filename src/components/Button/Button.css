@@ -1,9 +1,18 @@
 .button {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
   border-radius: var(--rounded-lg);
+  border: 2px solid transparent;
+  min-width: 44px;
+  min-height: 44px;
+  width: max-content;
   font-size: 18px;
   font-weight: var(--font-weight-medium);
+  text-align: center;
   color: var(--neutral-dark);
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .button::after {
@@ -21,7 +30,7 @@
 }
 
 .button--secondary {
-  border: 2px solid var(--primary-2);
+  border-color: var(--primary-2);
   box-shadow: var(--box-shadow);
   padding: var(--spacing-xxs) var(--spacing-sm);
 }
@@ -38,4 +47,17 @@
 
 .button--ghost:hover {
   color: var(--primary-1-darker);
+}
+
+.button__icon {
+  display: inline-block;
+  border-radius: 0;
+  width: 1em;
+  vertical-align: text-top;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.button__text:not(:last-child) {
+  padding-right: var(--spacing-xxs);
 }

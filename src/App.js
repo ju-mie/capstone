@@ -49,8 +49,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<h1>About</h1>} />
-              <Route path="/menu" element={<h1>Menu</h1>} />
+              <Route path="/about" element={<div className="page"><div className="page__container"><div className="page__content"><h1>About</h1></div></div></div>} />
+              <Route path="/menu" element={<div className="page"><div className="page__container"><div className="page__content"><h1>Menu</h1></div></div></div>} />
               <Route
                 path="/booking"
                 element={
@@ -67,8 +67,8 @@ function App() {
                 path="/confirmed-booking"
                 element={<ConfirmedBooking />}
               />
-              <Route path="/order-online" element={<h1>Order Online</h1>} />
-              <Route path="/login" element={<h1>Login</h1>} />
+              <Route path="/order-online" element={<div className="page"><div className="page__container"><div className="page__content"><h1>Order Online</h1></div></div></div>} />
+              <Route path="/login" element={<div className="page"><div className="page__container"><div className="page__content"><h1>Login</h1></div></div></div>} />
             </Routes>
           </main>
         <Footer/>

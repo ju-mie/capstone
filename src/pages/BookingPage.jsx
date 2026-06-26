@@ -1,6 +1,6 @@
 import React from "react"
 import BookingForm from "../components/BookingForm/BookingForm"
-import './BookingPage.css';
+import Hero from "../components/Hero/Hero"
 
 const BookingPage = (
   {
@@ -12,18 +12,21 @@ const BookingPage = (
   }) => {
 
   return (
-    <div className="booking-section">
-      <div className="booking-section__container container">
-        <BookingForm 
-          availableTimes={availableTimes}
-          availableOccasions={availableOccasions}
-          dispatch={dispatch}
-          dispatchOccasions={dispatchOccasions}
-          submitForm={submitForm}
-        />
-        <p>Book your table quickly and easily.</p>
-      </div>
-    </div>
+    <>
+      <Hero
+        title="Reserve a table"
+        text="Book your table quickly and easily."
+        imgSrc="./assets/restaurant.jpg"
+        imgAlt="interior view of the restaurant"
+      />
+      <BookingForm 
+        availableTimes={availableTimes}
+        availableOccasions={availableOccasions}
+        dispatch={dispatch}
+        dispatchOccasions={dispatchOccasions}
+        submitForm={submitForm}
+      />
+    </>
   )
 }
 

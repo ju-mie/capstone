@@ -5,7 +5,7 @@ export const routes = [
   },
   {
     label: "About",
-    path: "/about",
+    path: "/#about",
   },
   {
     label: "Menu",

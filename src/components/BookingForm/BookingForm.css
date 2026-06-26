@@ -1,17 +1,46 @@
-.booking-form {
+.booking-form__form {
   grid-column: col-start 3 / span 8;
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--spacing-lg);
+}
+
+.booking-form__fieldset{
   display: grid;
   grid-template-columns: repeat(8, [col-start] 1fr);
   gap: var(--spacing-xs);
-  width: 100%;
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
-.booking-form__title {
-  grid-column: span 8;
+.booking-form .field {
+  grid-column: col-start 1 / span 4;
 }
 
-.booking-form__form {
-  grid-column: span 8;
-  display: grid;
-  gap: var(--spacing-xs);
+.booking-form .field:nth-child(even) {
+  grid-column-start: 5;
+}
+
+.booking-form__button {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 1200px) {
+  .booking-form__form {
+    grid-column: col-start 2 / span 10;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .booking-form__form {
+    grid-column: col-start 1 / span 12;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .booking-form .field,
+  .booking-form .field:nth-child(even) {
+    grid-column: col-start 1 / span 8;
+  }
 }
