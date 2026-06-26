@@ -1,32 +1,32 @@
 import About from '../components/About/About';
-import CallToAction from '../components/CallToAction/CallToAction';
+import Hero from '../components/Hero/Hero';
 import Specials from '../components/Specials/Specials';
 import Testimonials from '../components/Testimonials/Testimonials';
 
 const testimonials = [
   {
-    guest: 'John Doe',
+    guest: 'Sarah M.',
     imgSrc: './assets/restaurantfood.jpg',
     rating: '4.5',
-    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ',
+    text: 'Little Lemon quickly became our favorite neighborhood restaurant. The food is always fresh, and the staff makes every visit feel special.',
   },
   {
-    guest: 'Jane Doe',
+    guest: 'David R.',
     imgSrc: './assets/restaurantfood.jpg',
     rating: '4.5',
-    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    text: 'The flavors are incredible, and the seasonal specials never disappoint. You can truly taste the quality and attention to detail in every dish.',
   },
   {
-    guest: 'John Doe',
+    guest: 'Emma L.',
     imgSrc: './assets/restaurantfood.jpg',
     rating: '4.5',
-    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    text: 'From the friendly service to the beautifully presented dishes, everything about Little Lemon exceeded our expectations. We can\'t wait to come back!',
   },
   {
-    guest: 'Jane Doe',
+    guest: 'James W.',
     imgSrc: './assets/restaurantfood.jpg',
     rating: '4.5',
-    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    text: 'A wonderful dining experience every time. The atmosphere is cozy, the menu is diverse, and the Mediterranean cuisine is absolutely delicious.',
   }
 ];
 
@@ -38,21 +38,15 @@ const specials = [
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ',
   },
   {
-    dish: 'Greek Salat',
-    imgSrc: './assets/greek salad.jpg',
-    price: '12.99',
+    dish: 'Pasta',
+    imgSrc: './assets/pasta.jpg',
+    price: '5.99',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ',
   },
   {
-    dish: 'Greek Salat',
-    imgSrc: './assets/greek salad.jpg',
-    price: '12.99',
-    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ',
-  },
-  {
-    dish: 'Greek Salat',
-    imgSrc: './assets/greek salad.jpg',
-    price: '12.99',
+    dish: 'Lemon Dessert',
+    imgSrc: './assets/lemon dessert.jpg',
+    price: '5.00',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ',
   },
 ];
@@ -60,12 +54,12 @@ const specials = [
 const HomePage = () => {
   return (
     <>
-      <CallToAction
+      <Hero
         title="Little Lemon"
         subtitle="Chicago"
         text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
         linkLabel="Reserve a table"
-        linkSrc="#"
+        linkUrl="/booking"
         imgSrc="./assets/restaurantfood.jpg"
         imgAlt="Restaurant"
       />
@@ -73,7 +67,7 @@ const HomePage = () => {
         title="This weeks specials"
         data={specials}
         linkLabel="Order online"
-        linkSrc="#"
+        linkSrc="/order-online"
       />}
       <Testimonials
         title="Testimonials"
@@ -83,9 +77,9 @@ const HomePage = () => {
         title="Little Lemon"
         subtitle="Chicago"
         text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-        imgSrc1="./assets/restaurantfood.jpg"
+        imgSrc1="./assets/restaurant chef B.jpg"
         imgAlt1="Restaurant"
-        imgSrc2="./assets/restaurantfood.jpg"
+        imgSrc2="./assets/Mario and Adrian A.jpg"
         imgAlt2="Restaurant"
       />
     </>

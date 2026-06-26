@@ -20,6 +20,7 @@ const DishTeaser = ({dish="", price="", text="", imgSrc="", imgAlt="", imgClass=
           className="dish-teaser__button"
           variant="ghost"
           label="Deliver"
+          icon="./assets/icons/delivery.png"
           />
       </div>
     </article>

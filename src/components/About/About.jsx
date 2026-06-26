@@ -5,11 +5,11 @@ import Image from "../Image";
 const About = ({title="", subtitle="", text="", imgSrc1="", imgAlt1="", imgClass1="", imgSrc2="", imgAlt2="", imgClass2=""}) => {
 
   return (
-    <section className="about-section">
-      <div className="about-section__container container">
+    <section id="about" className="about-section section">
+      <div className="about-section__container section__container">
         <div className="about-section__text-wrapper">
           <h3 className="about-section__title h1">{title}</h3>
-          <h4 className="about-section__subtitle h2">{subtitle}</h4>
+          {subtitle!=='' ? <h4 className="about-section__subtitle h2">{subtitle}</h4>: ''}
           <p className="about-section__text">{text}</p>
         </div>
         <div className="about-section__image-wrapper about-section__image-wrapper--1">

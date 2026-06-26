@@ -5,7 +5,7 @@ import DishTeaser from "../DishTeaser/DishTeaser";
 const Specials = ({ data, title, linkLabel, linkSrc }) => {
   return (
     <section className="specials-section">
-      <div className="specials-section__container container">
+      <div className="specials-section__container section__container">
         <div className="specials-section__header">
           <h3 className="specials-section__title">{title}</h3>
           <a className="specials-section__button button button--primary" href={linkSrc}>{linkLabel}</a>

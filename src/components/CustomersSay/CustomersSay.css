@@ -5,9 +5,16 @@
   gap: var(--spacing-xxs);
   border-radius: var(--rounded-sm);
   box-shadow: var(--box-shadow);
+  margin: 0;
   padding: var(--spacing-xs);
   color: var(--text-on-dark);
   background-color: var(--bg-dark);
+}
+
+@media screen and (max-width: 768px) {
+  .customers-say {
+    min-width: 180px;
+  }
 }
 
 .customers-say__wrapper {
@@ -15,6 +22,18 @@
   grid-column: col-start 3 / span 8;
   gap: var(--spacing-xxs);
   align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .customers-say__wrapper {
+    grid-column: col-start 5 / span 8;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .customers-say__wrapper {
+    grid-column: col-start 5 / span 9;
+  }
 }
 
 .customers-say__image-wrapper {
@@ -35,4 +54,12 @@
 
 .customers-say__name {
   color: inherit;
+}
+
+.customers-say__quote::before {
+  content: open-quote;
+}
+
+.customers-say__quote::after {
+  content: close-quote;
 }

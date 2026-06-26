@@ -4,9 +4,9 @@ import CustomersSay from "../CustomersSay/CustomersSay";
 
 const Testimonials = ({ data, title }) => {
   return (
-    <section className="testimonials-section">
-      <div className="testimonials-section__container container">
-        <h3 className="testimonials-section__title">{title}</h3>
+    <section className="testimonials-section section">
+      <div className="testimonials-section__container section__container">
+        <h3 className="testimonials-section__title section__title">{title}</h3>
         {data && data.length > 0 && (
           <div className="testimonials-section__customers-say">
           {data.map((teaser, index) => (
