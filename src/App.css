@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
