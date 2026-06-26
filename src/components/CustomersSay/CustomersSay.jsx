@@ -18,7 +18,7 @@ const CustomersSay = ({rating="", guest="", text="", imgSrc="", imgAlt="", imgCl
   return (
     users.map((user) => (
       <blockquote key={user.login.uuid} className="customers-say">
-        <div className="customers-say__rating">{rating}/5</div>
+        <div className="customers-say__rating"><Image className="customers-say__rating-icon" imgSrc="./assets/icons/star.png" imgAlt="Star rating"></Image>{rating}/5</div>
         <div className="customers-say__wrapper">
           <div className="customers-say__image-wrapper">
             <Image className={imgClass + " customers-say__img"} imgSrc={user.picture.medium} imgAlt={user.img} />

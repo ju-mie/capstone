@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   grid-column: span 2;
-  gap: var(--spacing-xxs);
+  gap: var(--spacing-xs) var(--spacing-xxs);
   border-radius: var(--rounded-sm);
   box-shadow: var(--box-shadow);
   margin: 0;
@@ -36,6 +36,18 @@
   }
 }
 
+.customers-say__rating {
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+}
+
+.customers-say__rating-icon {
+  display: inline-block;
+  margin-right: var(--spacing-xxs);
+  width: 1em;
+  vertical-align: text-top;
+}
+
 .customers-say__image-wrapper {
   flex: 0 1 60px;
   aspect-ratio: 1/1;
@@ -50,10 +62,9 @@
 .customers-say__name {
   flex: 3 1;
   margin: 0;
-}
-
-.customers-say__name {
-  color: inherit;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
 }
 
 .customers-say__quote::before {
