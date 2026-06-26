@@ -44,10 +44,10 @@ const footerLinks = [
 const Footer = () => {
 
   return (
-    <footer className="footer">
-      <div className="footer__container container">
-        <div className="footer__logo logo logo--footer">
-          <Image className="logo__img logo__img--footer" imgSrc="./assets/Asset 9@4x.png" imgAlt="small version of logo"/>
+    <footer className="footer-section section">
+      <div className="footer-section__container section__container">
+        <div className="footer-section__logo logo logo--footer">
+          <Image className="logo__img logo__img--footer" imgSrc="./assets/Asset 18@4x.png" imgAlt="small inverted version of logo"/>
         </div>
         {((footerLinks && footerLinks.length > 0) || (routes && routes.length > 0)) && (
           <nav className="footer-nav">
@@ -62,7 +62,7 @@ const Footer = () => {
                         to={route.path}
                         className={({ isActive, isPending, isTransitioning }) =>
                           [
-                            "header-nav__link",
+                            "footer-nav__link",
                             isPending ? "pending" : "",
                             isActive ? "active" : "",
                             isTransitioning ? "transitioning" : "",

@@ -6,9 +6,9 @@ import './Header.css';
 const Header = () => {
 
   return (
-    <header className="header">
-      <div className="header__container container">
-        <div className="header__logo logo logo--header">
+    <header className="header-section section">
+      <div className="header-section__container section__container">
+        <div className="header-section__logo logo logo--header">
           <Image className="logo__img logo__img--header" imgSrc="./assets/Asset 16@4x.png" imgAlt="Logo of Little Lemon Restaurant"/>
         </div>
         <Nav />
