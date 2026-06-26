@@ -8,7 +8,7 @@ const Hero = ({title="", subtitle="", text="", linkLabel="", linkUrl="", imgSrc=
     <section className="hero-section section">
       <div className="hero-section__container section__container">
         <div className="hero-section__text-wrapper">
-          <h1 className="hero-section__title section__title">{title}</h1>
+          <h1 id="headingElement" className="hero-section__title section__title">{title}</h1>
           {subtitle!=='' ? <h2 className="hero-section__subtitle">{subtitle}</h2>: ''}
           <p className="hero-section__text">{text}</p>
           {(linkUrl && linkLabel) ? 
